@@ -470,7 +470,15 @@
                 <div class="portfolio-content">
                   <span class="category">Full-Stack AI Project</span>
                   <h3>AI Resume and Cover Letter Generator</h3>
-                  <p>A full-stack AI-powered tool that generates tailored resumes and cover letters using React, Express, Google's Gemini API.</p>
+                  <p>Get ready to impress with the <strong>AI Resume & Cover Letter Generator</strong> 🚀—a full-stack AI-powered tool that crafts custom resumes and cover letters based on your professional background and job goals! No more boring, generic applications—this app generates polished, ATS-optimized documents that stand out. Key features include:</p>
+                  <ul>
+                    <li><strong>React + Vite Frontend:</strong> Fast, clean, and responsive UI with seamless user interactions.</li>
+                    <li><strong>ExpressJS Backend:</strong> Manages API requests, data validation, and smooth integrations.</li>
+                    <li><strong>Google's Gemini API:</strong> Analyzes job descriptions and tailors content to highlight key skills.</li>
+                    <li><strong>Dynamic Form Inputs:</strong> Collects user information and transforms it into a winning application.</li>
+                    <li><strong>Instant Previews:</strong> Allows users to review and tweak their resumes or cover letters before downloading.</li>
+                  </ul>
+                  <p>With this app, you're not just applying—you're making a statement. 💼📄</p>
                   
                   <!-- Links Section -->
                   <div class="portfolio-links">
@@ -488,18 +496,37 @@
             <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/NovaAI.jpeg" class="img-fluid" alt="AI Lyric Generator" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
-                      <a href="https://github.com/PursuitMadeMe/AI-Podcast-Generator" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                      <a href="assets/img/portfolio/NovaAI.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
+                      <a href="https://ailyricsgenerator.netlify.app/" class="details-link"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
                   <span class="category">Full-Stack AI Project</span>
-                  <h3>AI-Powered Travel Recommender</h3>
-                  <p>A smart travel recommendation platform built with vector-based search algorithms. This AI-driven system analyzes user preferences and suggests personalized travel destinations, leveraging Express.js, RESTful APIs, and a robust database for seamless experiences.</p>
+                  <h3>AI Mood Lyric Generator</h3>
+                  <p>Say hello to <strong>Nova</strong> 🎧—your AI-powered lyric-writing assistant that generates fire lyrics based on your mood! Whether you're in a chill, upbeat, or deep emotional vibe, Nova crafts the perfect words to match. This full-stack build features:</p>
+                  <ul>
+                    <li><strong>React + Vite Frontend:</strong> Ensuring a snappy and responsive UI for smooth interactions.</li>
+                    <li><strong>ExpressJS Backend:</strong> Handles requests, manages API calls, and keeps everything running tight.</li>
+                    <li><strong>Google’s Gemini API:</strong> Generates mood-based lyric suggestions with AI finesse.</li>
+                    <li><strong>Custom Mood Filter:</strong> Choose a mood and get lyrics tailored to your exact vibe.</li>
+                    <li><strong>Dynamic UI Components:</strong> Interactive lyric previews with quick navigation and easy-to-edit options.</li>
+                  </ul>
+                  <p>Built to keep creators in flow mode, Nova is your go-to co-writer when inspiration strikes!</p>
+
+                   <!-- Links Section -->
+                   <div class="portfolio-links">
+                    <!-- GitHub Repository Link -->
+                    <p class="github-link">
+                      <i class="bi bi-github"></i> 
+                      <a href="https://github.com/PursuitMadeMe/ai-lyric-frontend" target="_blank">View FrontEnd on GitHub</a>
+                      <a href="https://github.com/PursuitMadeMe/ai-lyric-backend" target="_blank">View BackEnd on GitHub</a>
+                    </p>
+                  </div>
+
               </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -1022,6 +1049,34 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var portfolioContainer = document.querySelector(".isotope-container");
+  
+      // Initialize Isotope after AOS animation
+      if (portfolioContainer) {
+        var iso = new Isotope(portfolioContainer, {
+          itemSelector: ".portfolio-item",
+          layoutMode: "fitRows", // or 'masonry' if you prefer
+        });
+  
+        // Recalculate layout after AOS animation completes
+        window.addEventListener("load", function () {
+          AOS.init({
+            once: true, // Animations trigger only once
+            duration: 800,
+          });
+  
+          // Recalculate layout after animations finish
+          setTimeout(function () {
+            iso.layout();
+          }, 500); // Small delay for smooth layout
+        });
+      }
+    });
+  </script>
+  
 
 </body>
 
