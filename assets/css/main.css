@@ -963,6 +963,20 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
+.skills-flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills-flex-wrapper .skill-box {
+  flex: 1 1 18%; /* ~5 boxes per row */
+  min-width: 200px;
+  max-width: 250px;
+}
+
+
 .skills .skill-box {
   background-color: var(--surface-color);
   padding: 2rem;
@@ -983,11 +997,11 @@ section,
 }
 
 .skills .skill-box .progress {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
-  border-radius: 50px;
-  height: 8px;
-  margin-top: 5px;
-  overflow: hidden;
+  height: 4px;
+  width: 100%;
+  background-color: var(--accent-color); /* Solid orange bar */
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 .skills .skill-box .progress .progress-bar {
